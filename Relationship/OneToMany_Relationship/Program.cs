@@ -93,9 +93,9 @@ namespace OneToMany_Relationship
     {
         static void Main(string[] args)
         {
-            AddDepartment();
+            //AddDepartment();
             //AddEmployee();
-            //AddEmployeeByDepartment();
+            AddEmployeeByDepartment();
         }
 
         static void AddEmployee()
@@ -136,13 +136,13 @@ namespace OneToMany_Relationship
         {
             using (var db = new ECommerceDbContext())
             {
-                var department = db.Departments.FirstOrDefault(d => d.DepartmentName == "Enginnering");
+                var department = db.Departments.FirstOrDefault(d => d.DepartmentName == "IK");
       
                 department.Employees.AddRange(new List<Employee>()
                 {
-                    new Employee{Name = "Sena", Surname ="Şanlı"},  // employee.DepartmentId = Id; 
-                    new Employee{Name = "Tuncer", Surname ="Atakul"}, // employee.DepartmentId = Id;
-                    new Employee{Name = "Murat", Surname ="Boz"},// employee.DepartmentId = Id;
+                    new Employee{Name = "Nursel", Surname ="Şanlı"},  // employee.DepartmentId = Id; 
+                    new Employee{Name = "Şaziye", Surname ="Atakul"}, // employee.DepartmentId = Id;
+                    new Employee{Name = "Sane", Surname ="Boz"},// employee.DepartmentId = Id;
 
                     /*
                      * Yeni eklenen Employee nesneleri, var olan bir departmana eklenirken, bu departmanın Id değeri Employee nesnesinin DepartmentId özelliğine atanmalıdır. Bu Id sayesinde employee nesnesinin Department nesnesine ilgili DepartmentId nin bilgileri gelecektir.
