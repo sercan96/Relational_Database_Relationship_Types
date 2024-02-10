@@ -13,6 +13,7 @@
 
 This repository is a guide for developers using Entity Framework Core. It contains all the information necessary to understand and apply relationship types correctly.
 
+
 <> <b> ONE TO MANY RELATIONSHIP </b><>
 
 ![Dependent_Principal](https://github.com/sercan96/Relational_Database_Relationship_Types/assets/38535473/206292d7-0558-4000-84bc-84145c47e8c1)
@@ -28,10 +29,11 @@ This repository is a guide for developers using Entity Framework Core. It contai
 * That is, when new Employee objects are added to the Department object, Entity Framework automatically associates the DepartmentId property of each Employee object with the Id value of the relevant Department object and adds new records to the Employee table by reflecting this relationship in the database. In this way, related data is stored consistently in the database.
  
 * When ids are associated, the object corresponding to the id is also filled.
-
-  <><b> ONE TO ONE RELATIONSHIP </b><>
   
-  ![OneToOne](https://github.com/sercan96/Relational_Database_Relationship_Types/assets/38535473/d2b18570-ac5a-47e9-b42a-61ab9e4b2ff1)
+
+<><b> ONE TO ONE RELATIONSHIP </b><>
+  
+![OneToOne](https://github.com/sercan96/Relational_Database_Relationship_Types/assets/38535473/d2b18570-ac5a-47e9-b42a-61ab9e4b2ff1)
 
 -In a one-to-one relationship:
 
