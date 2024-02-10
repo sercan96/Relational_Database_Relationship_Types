@@ -33,7 +33,8 @@ This repository is a guide for developers using Entity Framework Core. It contai
 
 <><b> ONE TO ONE RELATIONSHIP </b><>
   
-![OneToOne](https://github.com/sercan96/Relational_Database_Relationship_Types/assets/38535473/d2b18570-ac5a-47e9-b42a-61ab9e4b2ff1)
+![OneToOne](https://github.com/sercan96/Relational_Database_Relationship_Types/assets/38535473/149c19c9-ee45-4ef4-a52f-62180e399af8)
+![Error](https://github.com/sercan96/Relational_Database_Relationship_Types/assets/38535473/59b38581-d6f8-4886-b0f6-beb8a2e4179f)
 
 -In a one-to-one relationship:
 
@@ -41,6 +42,12 @@ This repository is a guide for developers using Entity Framework Core. It contai
 * The dependent class (EmployeeAddress) contains supplementary data, dependent on the principal class.
 * Each instance of the dependent class is associated with exactly one instance of the principal class.
 * The relationship is established through a foreign key (EmployeeID in this case) in the dependent class.
+
+* In a one-to-one relationship, there is a principal entity and a dependent entity. In this type of relationship, each parent entity is associated with one dependent entity, and each dependent entity is associated with only one parent entity.
+
+* In many cases, defining the foreign key field in the dependent entity as a separate column may incur an extra cost. Instead, we can use the ID field in the dependent entity as both a primary key and a foreign key. This approach takes advantage of the unique feature of being a primary key, while at the same time it can be associated with other tables.
+
+* In this way, cost and complexity can be reduced by using the ID field in the dependent table as both a primary key and a foreign key, instead of defining a separate column in both tables. This provides a cleaner and more efficient structure in database design.
 
   
 
