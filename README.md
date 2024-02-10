@@ -22,3 +22,5 @@ This repository is a guide for developers using Entity Framework Core. It contai
 * That is, when new Employee objects are added to the Department object, Entity Framework automatically associates the DepartmentId property of each Employee object with the Id value of the relevant Department object and adds new records to the Employee table by reflecting this relationship in the database. In this way, related data is stored consistently in the database.
  
 * When ids are associated, the object corresponding to the id is also filled.
+  
+* In a relationship, the "dependent" party is the party that is dependent on the other party in the relationship. In a "one-to-many" relationship, the "many" party is usually dependent.
