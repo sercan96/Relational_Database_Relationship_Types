@@ -53,8 +53,13 @@ This repository is a guide for developers using Entity Framework Core. It contai
 
 ![ManyToMany](https://github.com/sercan96/Relational_Database_Relationship_Types/assets/38535473/198fedaa-ae25-47cb-838d-6c94b517fc4d)
 
+![screenshot 1](https://github.com/sercan96/Relational_Database_Relationship_Types/assets/38535473/71207fa0-db66-40bb-8689-0c4023aff5b3)
+
+
 * Cross Table has to be created manually
 * No need to add as DBSet
 * Composite Primary Key must be installed with the HasKey method
+* This system is made according to the Fluent API method.
+* When we establish a one-to-many relationship between the Book and the BookAuthor, and a one-to-many relationship between the Author and the BookAuthor, we indirectly establish a many-to-many relationship between the Book and the Author.
 
 
