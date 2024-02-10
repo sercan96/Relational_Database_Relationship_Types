@@ -39,7 +39,7 @@ namespace OneToMany_Relationship
     #region Data Annotation
 
     // Default Convention yönteminde foreign key kolonuna karşılık gelen property tanımladığımızda bu property ismi temel geleneksel entity kurallarına uymuyorsa eğerdata annotationlar ile müdahalede bulunabiliriz.
-    public class Employee
+    public class Employee // Dependent(Bağımlı)
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -49,7 +49,7 @@ namespace OneToMany_Relationship
         public Department Department { get; set; } // Navigation Property
     }
 
-    public class Department
+    public class Department // Principal (Ana)
     {
         public Department()
         {
@@ -114,6 +114,8 @@ namespace OneToMany_Relationship
                 {
                     Console.WriteLine(item.Name);
                 }
+                Console.ReadLine();
+     
             }
         }
 
@@ -127,7 +129,7 @@ namespace OneToMany_Relationship
                     new Department{DepartmentName = "Enginnering",Room =21},
                     new Department{DepartmentName = "IK",Room =12},
                 });
-  
+
                 db.SaveChanges();
             }
         }
@@ -140,12 +142,15 @@ namespace OneToMany_Relationship
       
                 department.Employees.AddRange(new List<Employee>()
                 {
-                    new Employee{Name = "Nursel", Surname ="Şanlı"},  // employee.DepartmentId = Id; 
-                    new Employee{Name = "Şaziye", Surname ="Atakul"}, // employee.DepartmentId = Id;
-                    new Employee{Name = "Sane", Surname ="Boz"},// employee.DepartmentId = Id;
+                    new Employee{Name = "Nursel", Surname ="Şanlı"}, // employee.DepartmentId = department.Id; 
+                    new Employee{Name = "Şaziye", Surname ="Atakul"},// employee.DepartmentId = department.Id;
+                    new Employee{Name = "Sane", Surname ="Boz"}, // employee.DepartmentId = department.Id;
 
                     /*
                      * Yeni eklenen Employee nesneleri, var olan bir departmana eklenirken, bu departmanın Id değeri Employee nesnesinin DepartmentId özelliğine atanmalıdır. Bu Id sayesinde employee nesnesinin Department nesnesine ilgili DepartmentId nin bilgileri gelecektir.
+                     * 
+                     * Yani, Department nesnesine yeni Employee nesneleri eklenirken, Entity Framework otomatik olarak her Employee nesnesinin DepartmentId özelliğini ilgili Department nesnesinin Id değeriyle ilişkilendirir ve bu ilişkiyi veritabanına yansıtarak Employee tablosuna yeni kayıtlar ekler. Bu sayede, ilişkili veriler tutarlı bir şekilde veritabanında depolanır.
+                     * Idler ilişkilendirildiğinde id nin karşılığı olan nesne de doldurulur.
                     */
                 });
 
@@ -153,8 +158,9 @@ namespace OneToMany_Relationship
 
                 foreach (var item in department.Employees)
                 {
-                    Console.WriteLine(item.Name);
+                    Console.WriteLine(item.Department.Room);
                 }
+                Console.ReadLine();
             }
         }
 

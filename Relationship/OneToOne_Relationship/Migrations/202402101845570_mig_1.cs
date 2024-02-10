@@ -1,4 +1,4 @@
-﻿namespace OneToMany_Relationship.Migrations
+﻿namespace OneToOne_Relationship.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
@@ -8,13 +8,15 @@
         public override void Up()
         {
             CreateTable(
-                "dbo.Departments",
+                "dbo.EmployeeAdresses",
                 c => new
                     {
-                        Id = c.Int(nullable: false, identity: true),
-                        DepartmentName = c.String(),
+                        Id = c.Int(nullable: false),
+                        Adress = c.String(),
                     })
-                .PrimaryKey(t => t.Id);
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Employees", t => t.Id)
+                .Index(t => t.Id);
             
             CreateTable(
                 "dbo.Employees",
@@ -23,20 +25,17 @@
                         Id = c.Int(nullable: false, identity: true),
                         Name = c.String(),
                         Surname = c.String(),
-                        DepartmentId = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Departments", t => t.DepartmentId, cascadeDelete: true)
-                .Index(t => t.DepartmentId);
+                .PrimaryKey(t => t.Id);
             
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Employees", "DepartmentId", "dbo.Departments");
-            DropIndex("dbo.Employees", new[] { "DepartmentId" });
+            DropForeignKey("dbo.EmployeeAdresses", "Id", "dbo.Employees");
+            DropIndex("dbo.EmployeeAdresses", new[] { "Id" });
             DropTable("dbo.Employees");
-            DropTable("dbo.Departments");
+            DropTable("dbo.EmployeeAdresses");
         }
     }
 }
