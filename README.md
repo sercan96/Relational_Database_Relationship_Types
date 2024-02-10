@@ -13,7 +13,13 @@
 
 This repository is a guide for developers using Entity Framework Core. It contains all the information necessary to understand and apply relationship types correctly.
 
-<b> ONE TO MANY EXAMPLE </b>
+<b> ONE TO MANY  </b>
+
+![screenshot 1](https://github.com/sercan96/Relational_Database_Relationship_Types/assets/38535473/56cb53da-6c1b-4745-8840-3efef1edaf30)
+
+* In a relationship, the "dependent" party is the party that is dependent on the other party in the relationship. In a "one-to-many" relationship, the "many" party is usually dependent.
+
+* Employee class depends on Department class. That is, Employee objects depend on Department objects. When a new department is created or we add a new employee to an existing department, Employee objects adapt to these changes. For example, a new employee's DepartmentId property is assigned to the corresponding department's Id, and that employee is added to the Employees collection. In this way, the state of the dependent class is shaped according to the state of the parent class that depends on it, ensuring data integrity and harmony between related data.
 
 ![OneToMany](https://github.com/sercan96/Relational_Database_Relationship_Types/assets/38535473/d6c82383-de87-4f80-9bc9-6de2c9118e5c) 
 
@@ -23,4 +29,6 @@ This repository is a guide for developers using Entity Framework Core. It contai
  
 * When ids are associated, the object corresponding to the id is also filled.
   
-* In a relationship, the "dependent" party is the party that is dependent on the other party in the relationship. In a "one-to-many" relationship, the "many" party is usually dependent.
+
+
+
