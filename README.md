@@ -15,7 +15,7 @@ This repository is a guide for developers using Entity Framework Core. It contai
 
 <b> ONE TO MANY  </b>
 
-![screenshot 1](https://github.com/sercan96/Relational_Database_Relationship_Types/assets/38535473/56cb53da-6c1b-4745-8840-3efef1edaf30)
+![Dependent_Principal](https://github.com/sercan96/Relational_Database_Relationship_Types/assets/38535473/206292d7-0558-4000-84bc-84145c47e8c1)
 
 * In a relationship, the "dependent" party is the party that is dependent on the other party in the relationship. In a "one-to-many" relationship, the "many" party is usually dependent.
 
