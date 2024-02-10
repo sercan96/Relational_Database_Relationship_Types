@@ -49,7 +49,12 @@ This repository is a guide for developers using Entity Framework Core. It contai
 
 * In this way, cost and complexity can be reduced by using the ID field in the dependent table as both a primary key and a foreign key, instead of defining a separate column in both tables. This provides a cleaner and more efficient structure in database design.
 
-  
+<><b> MANY TO MANY RELATIONSHIP </b><>
 
+![ManyToMany](https://github.com/sercan96/Relational_Database_Relationship_Types/assets/38535473/198fedaa-ae25-47cb-838d-6c94b517fc4d)
+
+* Cross Table has to be created manually
+* No need to add as DBSet
+* Composite Primary Key must be installed with the HasKey method
 
 
