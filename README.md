@@ -13,7 +13,9 @@
 
 This repository is a guide for developers using Entity Framework Core. It contains all the information necessary to understand and apply relationship types correctly.
 
-![OneToMany](https://github.com/sercan96/Relational_Database_Relationship_Types/assets/38535473/d6c82383-de87-4f80-9bc9-6de2c9118e5c)
+<b> ONE TO MANY EXAMPLE </b>
+
+![OneToMany](https://github.com/sercan96/Relational_Database_Relationship_Types/assets/38535473/d6c82383-de87-4f80-9bc9-6de2c9118e5c) 
 
 * When adding newly added Employee objects to an existing department, the Id value of this department must be assigned to the DepartmentId property of the Employee object. Thanks to this Id, information about the relevant DepartmentId will be sent to the Department object of the employee object.
   
