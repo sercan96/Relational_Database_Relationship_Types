@@ -9,7 +9,7 @@
 
 * <b>Usage of Data Annotation:</b> It shows with examples how to use Data Annotation to define our data model in relation. This method offers an easy-to-understand and fast way.
 
-* <b>Fluent API Usage:</b> Shows step by step how to determine relationship types using Fluent API. This approach provides greater flexibility and supports advanced scenarios.
+* <b>Fluent API Usage:</b> Shows step by step how to determine relationship types using Fluent API. This approach provides greater flexibility and supports advanced scenarios.Fluent API is a system that allows relationships to be established in the OnModelCreating method instead of specifying relationships directly on entity classes.
 
 This repository is a guide for developers using Entity Framework Core. It contains all the information necessary to understand and apply relationship types correctly.
 
@@ -49,7 +49,17 @@ This repository is a guide for developers using Entity Framework Core. It contai
 
 * In this way, cost and complexity can be reduced by using the ID field in the dependent table as both a primary key and a foreign key, instead of defining a separate column in both tables. This provides a cleaner and more efficient structure in database design.
 
-  
+<><b> MANY TO MANY RELATIONSHIP </b><>
 
+![ManyToMany](https://github.com/sercan96/Relational_Database_Relationship_Types/assets/38535473/198fedaa-ae25-47cb-838d-6c94b517fc4d)
+
+![screenshot 1](https://github.com/sercan96/Relational_Database_Relationship_Types/assets/38535473/71207fa0-db66-40bb-8689-0c4023aff5b3)
+
+
+* Cross Table has to be created manually
+* No need to add as DBSet
+* Composite Primary Key must be installed with the HasKey method
+* This system is made according to the Fluent API method.
+* When we establish a one-to-many relationship between the Book and the BookAuthor, and a one-to-many relationship between the Author and the BookAuthor, we indirectly establish a many-to-many relationship between the Book and the Author.
 
 
