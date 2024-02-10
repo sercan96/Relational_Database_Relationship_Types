@@ -9,7 +9,7 @@
 
 * <b>Usage of Data Annotation:</b> It shows with examples how to use Data Annotation to define our data model in relation. This method offers an easy-to-understand and fast way.
 
-* <b>Fluent API Usage:</b> Shows step by step how to determine relationship types using Fluent API. This approach provides greater flexibility and supports advanced scenarios.
+* <b>Fluent API Usage:</b> Shows step by step how to determine relationship types using Fluent API. This approach provides greater flexibility and supports advanced scenarios.Fluent API is a system that allows relationships to be established in the OnModelCreating method instead of specifying relationships directly on entity classes.
 
 This repository is a guide for developers using Entity Framework Core. It contains all the information necessary to understand and apply relationship types correctly.
 
