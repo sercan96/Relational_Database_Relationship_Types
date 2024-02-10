@@ -13,7 +13,7 @@
 
 This repository is a guide for developers using Entity Framework Core. It contains all the information necessary to understand and apply relationship types correctly.
 
-<b> ONE TO MANY  </b>
+<> <b> ONE TO MANY RELATIONSHIP </b><>
 
 ![Dependent_Principal](https://github.com/sercan96/Relational_Database_Relationship_Types/assets/38535473/206292d7-0558-4000-84bc-84145c47e8c1)
 
@@ -29,7 +29,7 @@ This repository is a guide for developers using Entity Framework Core. It contai
  
 * When ids are associated, the object corresponding to the id is also filled.
 
-  <b> ONE TO ONE </b>
+  <><b> ONE TO ONE RELATIONSHIP </b><>
   
   ![OneToOne](https://github.com/sercan96/Relational_Database_Relationship_Types/assets/38535473/d2b18570-ac5a-47e9-b42a-61ab9e4b2ff1)
 
